@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вот столько мы знакомы</title>
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/main.css">
+</head>
+
+<body>
+    <header class="header" id="header">
+        <video class="header-video" autoplay muted loop>
+            <source type="video/mp4" src="./video/header-video.mp4">
+        </video>
+        <div class="video-title">
+            <h1 id="days-counter">1000</h1>
+        </div>
+
+        <div class="mi_znakomi">
+            <img src="./img/header/Мы знакомы.png" alt="Мы знакомы">
+        </div>
+
+        <div class="hearts">
+            <img src="./img/header/Сердечки.png" alt="Сердечки">
+        </div>
+
+        <div class="days">
+            <img src="./img/header/Дней.png" alt="">
+        </div>
+    </header>
+
+    <section class="main">
+        <div class="flowers-decor">
+            <img src="./img/main/decor-flower-1.png" alt="" class="flower-1">
+            <img src="./img/main/decor-flower-2.png" alt="" class="flower-2">
+            <img src="./img/main/decor-flower-3.png" alt="" class="flower-3">
+            <img src="./img/main/decor-flower-4.png" alt="" class="flower-4">
+            <img src="./img/main/decor-flower-5.png" alt="" class="flower-5">
+            <img src="./img/main/decor-flower-6.png" alt="" class="flower-6">
+            <img src="./img/main/decor-flower-7.png" alt="" class="flower-7">
+        </div>
+
+        <div class="titles">
+            <h2 class="title-1">29 октября 2023 года моя жизнь <br> разделилась на “до” и “после”. Именно в <br> тот
+                день я познакомился с моим самым <br> дорогим
+                человеком на этой планете.</h2>
+
+            <h2 class="title-2">Геля, я хочу, чтобы это количество дней не <br> было для нас рубежом, и мы продолжали
+                <br> жить вместе еще очень долго.
+            </h2>
+
+            <h2 class="title-3">Я безмерно благодарен тебе за все <br> моменты, которые ты мне подарила, за <br>
+                теплоту, доброту и поддержку. Для меня ты - <br>
+                главная опора в жизни. <br>
+                <br>
+                Желаю тебе расти вместе со мной и никогда <br> ничего не бояться, ведь будучи рядом нам <br> подвластна
+                вся Земля.
+            </h2>
+
+            <h2 class="title-4">Я тебя очень сильно люблю и <br> дорожу тобой. Спасибо тебе!❤️</h2>
+        </div>
+
+        <div class="photos">
+            <img src="./img/main/Фото_01.png" alt="" class="photo-1">
+            <img src="./img/main/Фото_02.png" alt="" class="photo-2">
+            <img src="./img/main/Фото_03.png" alt="" class="photo-3">
+        </div>
+
+        <div class="arrows">
+            <img src="./img/main/стрелка_0.png" alt="" class="arrow-0">
+            <img src="./img/main/стрелка_1.png" alt="" class="arrow-1">
+            <img src="./img/main/стрелка_2.png" alt="" class="arrow-2">
+            <img src="./img/main/стрелка_3.png" alt="" class="arrow-3">
+        </div>
+
+        <div class="main-btn">
+            <a href="#header" class="btn">→ ПОСМОТРЕТЬ ЕЩЕ РАЗ ←</a>
+        </div>
+    </section>
+
+    </div>
+    <script>
+        function calculateDays() {
+            // 1. Задаем дату знакомства (месяцы в JS считаются с 0, поэтому октябрь — это 9)
+            const startDate = new Date(2023, 9, 29);
+
+            // 2. Берем сегодняшнюю дату
+            const today = new Date();
+
+            // 3. Находим разницу в миллисекундах
+            const timeDifference = today - startDate;
+
+            // 4. Переводим миллисекунды в целые дни (в одних сутках 1000мс * 60с * 60м * 24ч)
+            const daysPassed = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+            // 5. Находим наш h1 и заменяем в нем текст на получившееся число
+            document.getElementById('days-counter').textContent = daysPassed;
+        }
+
+        // Запускаем расчет сразу при загрузке страницы
+        calculateDays();
+    </script>
+
+</body>
+
+</html>
