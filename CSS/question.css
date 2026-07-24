@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    /* Фиксируем высоту страницы ровно по размеру экрана */
+    overflow: hidden;
+    /* НАМЕРТВО ЗАПРЕЩАЕТ СКРОЛЛ в любую сторону */
+}
+
+.question {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 60px;
+    color: #685044;
+    text-align: center;
+    margin-top: 400px;
+}
+
+.stroka-vvod {
+    background-color: #FDFDFD;
+    border: 2px solid #AEC5EB;
+    height: 75px;
+    width: 970px;
+    border-radius: 50px;
+    display: block;
+    margin: 55px auto 0 auto;
+    font-family: "Montserrat", sans-serif;
+    font-size: 28px;
+    color: #685044;
+    outline: none; /* Убираем стандартную черную рамку браузера при клике */
+    box-sizing: border-box; /* Чтобы рамка не раздувала инпут */
+    transition: border-color 0.3s ease;
+    text-align: left;
+    padding-left: 25px;
+
+}
+
+.stroka-vvod.error {
+    border-color: #ca8274;
+    box-shadow: 0 0 10px rgba(234, 177, 165, 0.5);
+}
+
+/* Decoration */
+
+.decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.flower-1 {
+    position: absolute;
+}
+
+.flower-2 {
+    position: absolute;
+    left: 414px;
+}
+
+.flower-3 {
+    position: absolute;
+    left: 1032px;
+}
+
+.flower-4 {
+    position: absolute;
+    left: 1334px;
+}
+
+.flower-5 {
+    position: absolute;
+    top: 413px;
+    left: 1305px;
+}
+
+.flower-6 {
+    position: absolute;
+    top: 624px;
+    left: 638px;
+}
+
+.flower-7 {
+    position: absolute;
+    top: 439px;
+}
