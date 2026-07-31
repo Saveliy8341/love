@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вопрос</title>
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/question.css">
+</head>
+
+<body>
+    <section class="main">
+        <h1 class="question">Когда мы познакомились?</h1>
+        <!-- <div class="stroka-vvod">
+        </div> -->
+        <input autocomplete="off" type="text" class="stroka-vvod" id="dateInput" placeholder="ДД.ММ.ГГГГ" autofocus>
+    </section>
+
+    <section class="decoration">
+        <img src="./img/question/q-flower-1.png" alt="" class="flower-1">
+        <img src="./img/question/q-flower-2.png" alt="" class="flower-2">
+        <img src="./img/question/q-flower-3.png" alt="" class="flower-3">
+        <img src="./img/question/q-flower-4.png" alt="" class="flower-4">
+        <img src="./img/question/q-flower-5.png" alt="" class="flower-5">
+        <img src="./img/question/q-flower-6.png" alt="" class="flower-6">
+        <img src="./img/question/q-flower-7.png" alt="" class="flower-7">
+    </section>
+
+    <script>
+        const inputElement = document.getElementById('dateInput');
+
+        // Слушаем нажатие клавиш в строке ввода
+        inputElement.addEventListener('keydown', function (event) {
+            // Если нажата клавиша Enter
+            if (event.key === 'Enter') {
+                const trimmedValue = inputElement.value.trim(); // Убираем случайные пробелы до и после текста
+
+                if (trimmedValue === '29.10.2023') {
+                    // Если ответ верный — перекидываем на главную
+                    window.location.href = 'love.html';
+                } else {
+                    // Если ответ неверный — красим рамку в красный
+                    inputElement.classList.add('error');
+
+                    // Бонус: если она начнет вводить заново, убираем красную ошибку
+                    inputElement.addEventListener('input', function () {
+                        inputElement.classList.remove('error');
+                    }, { once: true });
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
